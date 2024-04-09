@@ -3,9 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linkando icones fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- linkando fonte red hat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- linkando as configurações css a pagina -->
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/colors.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/login-container.css" />
+    <link rel="stylesheet" href="/assets/css/form-container.css" />
+    <link rel="stylesheet" href="/assets/css/form.css" />
+    <link rel="stylesheet" href="/assets/css/form-title.css" />
     <title>Pagina de login</title>
   </head>
   <body>
-    <p>teste</p>
+    <main>
+      <div class="login-container">
+        <div class="form-container">
+          <form class="form form-login">
+            <h2 class="form-title">Entrar com</h2>
+            <div class="form-social">
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <p class="form-text">ou usuario e senha</p>
+            <div class="form-inputs">
+              <input type="text" class="form-input" placeholder="Usuario" />
+              <input type="password" class="form-input" placeholder="Senha" />
+            </div>
+            <a href="#" class="form-link">Esqueceu a senha?</a>
+            <button class="form-button">Logar</button>
+          </form>
+          <form class="form form-register"></form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
