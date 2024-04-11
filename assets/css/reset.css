@@ -6,6 +6,7 @@
 }
 
 a {
+  color: var(--t-text-color-dark);
   text-decoration: none;
 }
 
