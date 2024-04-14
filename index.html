@@ -28,11 +28,15 @@
     <link rel="stylesheet" href="/assets/css/form-inputs-container.css" />
     <link rel="stylesheet" href="/assets/css/form-inputs.css" />
     <link rel="stylesheet" href="/assets/css/form-button.css" />
+    <link rel="stylesheet" href="/assets/css/overlay-container.css" />
+    <link rel="stylesheet" href="/assets/css/overlay.css" />
+    <!-- linkando arquivo js -->
+    <script src="/assets/js/login.js" defer></script>
     <title>Pagina de login</title>
   </head>
   <body>
     <main>
-      <div class="login-container">
+      <div class="login-container toggle" id="login-container">
         <div class="form-container">
           <!-- Formulario de login -->
           <form class="form form-login">
@@ -79,6 +83,30 @@
             </div>
             <button type="button" class="form-button">Cadastrar</button>
           </form>
+        </div>
+
+        <!-- criando o overlay(segunda tela do formulario) -->
+        <div class="overlay-container">
+          <div class="overlay">
+            <h2 class="form-title form-title-light">Ja tem conta?</h2>
+            <p class="form-text">
+              para entrar na nossa plataforma faça login com suas informações
+            </p>
+            <button type="button" class="form-button form-button-light">
+              Entrar
+            </button>
+          </div>
+          <div class="overlay">
+            <h2 class="form-title form-title-light">Ole aluno</h2>
+            <p class="form-text">cadastre e comece a usar nossa plataforma</p>
+            <button
+              type="button"
+              class="form-button form-button-light"
+              id="open-register"
+            >
+              Cadastrar
+            </button>
+          </div>
         </div>
       </div>
     </main>

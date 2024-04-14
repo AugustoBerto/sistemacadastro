@@ -16,3 +16,8 @@
   background-color: var(--primary-color);
   color: var(--secundary-color);
 }
+
+.form-button-light {
+  border: 2px solid var(--secundary-color);
+  color: var(--text-color-light);
+}
