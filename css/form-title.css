@@ -1,8 +1,21 @@
-.form-title{
-    font-size: 3rem;
-    font-weight: 400;
+.form-title {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 400;
 }
 
-.form-title-light{
-    color: var(--text-color-light);
+.form-title-light {
+  color: var(--text-color-dark);
+}
+
+.text-overlay {
+  color: var(--secundary-color);
+}
+
+.form-text {
+  color: var(--primary-color);
+}
+
+.form-link {
+  color: var(--primary-color);
 }
