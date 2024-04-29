@@ -31,12 +31,13 @@
     width: 100%;
     justify-content: space-evenly;
   }
+
   .form-register {
     position: absolute;
-    background-color: var(--primary-color);
     color: var(--secundary-color);
     transform: translateX(100%);
   }
+
   .login-container.move .form-register {
     transform: translateX(0%);
   }
