@@ -5,3 +5,11 @@
   border-style: none;
   background-color: var(--icon-color);
 }
+
+.eye {
+  cursor: pointer;
+  position: relative;
+  bottom: 43px;
+  left: 263px;
+  width: 27px;
+}

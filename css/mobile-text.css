@@ -1,5 +1,6 @@
 .mobile-text {
     display: none;
+    color: var(--text-color-light);
 }
 
 @media (max-width:768px) {
