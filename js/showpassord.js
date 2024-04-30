@@ -1,11 +1,11 @@
 "use strict";
 
 // Função showpassword
-function showpassword(passwd, showpasswd) {
+function showpassword(input, button) {
 
     // Referência para o campo/botão
-    const passwdInput = document.getElementById(passwd);
-    const showButton = document.getElementById(showpasswd);
+    const passwdInput = document.getElementById(input);
+    const showButton = document.getElementById(button);
 
     // Evento de clique para o botão de exibir senha (showpasswd)
     showButton.addEventListener("click", function () {
@@ -22,8 +22,9 @@ function showpassword(passwd, showpasswd) {
 
 // Evento que é acionado quando todos os elementos da pagina estiverem carregados
 document.addEventListener("DOMContentLoaded", function () {
-    showpassword("passwd1", "showpasswd1");
-    showpassword("passwd2", "showpasswd2");
+    // Chama a função
+    showpassword("passwdlog", "showpasswdlog");
+    showpassword("passwdcad", "showpasswdcad");
 });
 
 // :)

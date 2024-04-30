@@ -62,9 +62,9 @@
 
           <div class="form-input-container">
             <input type="email" class="form-input" name="email" placeholder="Email" required />
-            <input type="password" class="form-input" id="passwd1" name="password" placeholder="Senha" required />
-            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="showpasswd1"
-              class="eye">
+            <input type="password" class="form-input" id="passwdlog" name="password" placeholder="Senha" required />
+            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+              id="showpasswdlog" class="eye">
           </div>
 
           <a href="#" class="form-link">Esqueceu a senha?</a>
@@ -96,9 +96,9 @@
           <div class="form-input-container">
             <input type="text" class="form-input" name="name" placeholder="Nome" required />
             <input type="email" class="form-input" name="email" placeholder="Email" required />
-            <input type="password" class="form-input" id="passwd2" name="password" placeholder="Senha" required />
-            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="showpasswd2"
-              class="eye">
+            <input type="password" class="form-input" id="passwdcad" name="password" placeholder="Senha" required />
+            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+              id="showpasswdcad" class="eye">
           </div>
 
           <button type="submit" class="form-button" name="register">Cadastrar</button>

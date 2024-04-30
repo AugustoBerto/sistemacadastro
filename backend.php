@@ -1,13 +1,9 @@
 <?php
+// Importa as configurações
+include ("includes/config.php");
 
-// Parâmetros de conexão
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "sistema";
-
-// Conecta ao banco de dados utilizando os parâmetros de conexão
-$connect = new mysqli($host, $username, $password, $database);
+// Conecta ao banco de dados utilizando os parâmetros de conexão (config.php)
+$connect = new mysqli(M_HOST, M_USER, M_PASS, M_DBNAME);
 
 // Verifica se houve erro na conexão
 if ($connect->connect_error) {
