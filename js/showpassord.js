@@ -25,3 +25,5 @@ document.addEventListener("DOMContentLoaded", function () {
     showpassword("passwd1", "showpasswd1");
     showpassword("passwd2", "showpasswd2");
 });
+
+// :)

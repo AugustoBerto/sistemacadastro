@@ -28,15 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     // Validação
     if ($result->num_rows > 0) {
         // Captura os dados do usuário
-        // Verificando se a senha é valida
+        // Verifica se a senha é valida
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             echo "Login bem-sucedido!";
         } else {
-            echo "Email ou senha incorretos.";
+            echo "Email ou senha incorretos";
         }
     } else {
-        echo "Email ou senha incorretos.";
+        echo "Email não cadastrado";
     }
 }
 
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
     // Verifica se o email já está em uso
     if ($email_check->num_rows > 0) {
-        echo "Este email já está cadastrado.";
+        echo "Este email já está cadastrado";
     } else {
         // Insere os dados na tabela
         $register = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
@@ -70,3 +70,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
 // Fecha conexão
 $connect->close();
+
+// :)
