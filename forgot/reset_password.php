@@ -14,13 +14,30 @@ if (isset($_GET['token'])) {
 
     if ($result->num_rows > 0) {
         // Formulário para redefinir senha
-        echo '
-        <form method="post" action="update_password.php">
-            <input type="hidden" name="token" value="' . $token . '">
-            <label for="password">Nova Senha:</label><br>
-            <input type="password" id="password" name="password"><br>
-            <input type="submit" value="Redefinir Senha">
-        </form>';
+        ?>
+        <!DOCTYPE html>
+        <html lang="pt-br">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../assets/css/forgot.css">
+            <title>Nova senha</title>
+        </head>
+
+        <body>
+            <div class="container">
+                <form class="form" method="post" action="update_password.php">
+                    <input type="hidden" name="token" value="<?php echo $token; ?>">
+                    <p class="text">Nova Senha:</p>
+                    <input class=" input" type="password" id="password" name="password">
+                    <input class="button" type="submit" value="Redefinir Senha">
+                </form>
+            </div>
+        </body>
+
+        </html>
+        <?php
     } else {
         echo "Token inválido ou expirado.";
     }
@@ -30,3 +47,4 @@ if (isset($_GET['token'])) {
 
 // Fecha conexão
 $connect->close();
+?>

@@ -7,6 +7,9 @@ include ("../includes/connect.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// Definindo a variável de mensagem
+$message = '';
+
 // Função para gerar um token
 function generateToken($length = 20)
 {
@@ -47,39 +50,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['forgot'])) {
             $mail->addAddress($email);
 
             $mail->isHTML(true);
+            $mail->CharSet = "UTF-8";
             $mail->Subject = 'Recuperação de senha';
             $mail->Body = 'Você solicitou a recuperação de senha. Clique no link a seguir para redefinir sua senha: <a href="http://localhost/sistemacadastro/forgot/reset_password.php?token=' . $token . '">Redefinir Senha</a>';
-            $mail->charSet = "UTF-8";
 
             $mail->send();
-            echo "Um e-mail de recuperação foi enviado para o seu endereço de e-mail.";
+            $message = "E-mail de recuperação enviado";
         } catch (Exception $e) {
-            echo "O e-mail de recuperação não pôde ser enviado. Erro: {$mail->ErrorInfo}";
+            $message = "O e-mail de recuperação não pôde ser enviado. Erro: {$mail->ErrorInfo}";
         }
     } else {
-        echo "O e-mail fornecido não está cadastrado.";
+        $message = "Este e-mail não está cadastrado.";
     }
 }
 
 $connect->close();
 
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/forgot.css">
     <title>Recuperação de Senha</title>
 </head>
 
 <body>
-    <h2>Recuperação de Senha</h2>
-    <form method="post" action="forgot_password.php">
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <input type="submit" name="forgot" value="Enviar E-mail de Recuperação">
-    </form>
+    <div class="container">
+        <form class="form" method="post" action="forgot_password.php">
+            <p class="text" for="email">Digite seu endereço de email:</p>
+            <input class="input" type="email" id="email" name="email" required>
+            <input class="button" type="submit" name="forgot" value="Enviar">
+            <?php if (!empty($message)): ?>
+                <p><?php echo $message; ?></p>
+            <?php endif; ?>
+        </form>
+    </div>
 </body>
 
 </html>
