@@ -13,21 +13,21 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700;900&display=swap" />
 
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/colors.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/login-container.css" />
-  <link rel="stylesheet" href="./css/form-container.css" />
-  <link rel="stylesheet" href="./css/form.css" />
-  <link rel="stylesheet" href="./css/form-title.css" />
-  <link rel="stylesheet" href="./css/form-social.css" />
-  <link rel="stylesheet" href="./css/social-icon.css" />
-  <link rel="stylesheet" href="./css/form-input-container.css" />
-  <link rel="stylesheet" href="./css/form-input.css" />
-  <link rel="stylesheet" href="./css/form-button.css" />
-  <link rel="stylesheet" href="./css/overlay-container.css" />
-  <link rel="stylesheet" href="./css/overlay.css" />
-  <link rel="stylesheet" href="./css/mobile-text.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/colors.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/login-container.css" />
+  <link rel="stylesheet" href="./assets/css/form-container.css" />
+  <link rel="stylesheet" href="./assets/css/form.css" />
+  <link rel="stylesheet" href="./assets/css/form-title.css" />
+  <link rel="stylesheet" href="./assets/css/form-social.css" />
+  <link rel="stylesheet" href="./assets/css/social-icon.css" />
+  <link rel="stylesheet" href="./assets/css/form-input-container.css" />
+  <link rel="stylesheet" href="./assets/css/form-input.css" />
+  <link rel="stylesheet" href="./assets/css/form-button.css" />
+  <link rel="stylesheet" href="./assets/css/overlay-container.css" />
+  <link rel="stylesheet" href="./assets/css/overlay.css" />
+  <link rel="stylesheet" href="./assets/css/mobile-text.css" />
 
   <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
 
@@ -127,7 +127,7 @@
   </main>
 </body>
 
-<script src="./js/showpassord.js" defer></script>
-<script src="./js/login.js" defer></script>
+<script src="./assets/js/showpassord.js" defer></script>
+<script src="./assets/js/login.js" defer></script>
 
 </html>
