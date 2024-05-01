@@ -41,7 +41,7 @@
       <div class="form-container">
 
         <!-- formulario de login -->
-        <form class="form form-login" action="backend.php" method="POST">
+        <form class="form form-login" action="loginsingup/auth.php" method="POST">
           <h2 class="form-title">Entrar com</h2>
 
           <div class="form-social">
@@ -67,14 +67,14 @@
               id="showpasswdlog" class="eye">
           </div>
 
-          <a href="#" class="form-link">Esqueceu a senha?</a>
+          <a href="forgot/forgot_password.php" class="form-link">Esqueceu a senha?</a>
           <button type="submit" class="form-button" name="login">Logar</button>
           <p class="mobile-text">Não tem conta? <a href="#" id="open-register-mobile">Registre-se</a></p>
 
         </form>
 
         <!-- formulario de cadastro -->
-        <form class="form form-register" action="backend.php" method="POST">
+        <form class="form form-register" action="loginsingup/auth.php" method="POST">
           <h2 class="form-title">Criar Conta</h2>
 
           <div class="form-social">
