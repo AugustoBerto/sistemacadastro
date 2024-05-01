@@ -65,8 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['forgot'])) {
 }
 
 $connect->close();
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -80,18 +81,16 @@ $connect->close();
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <form class="form" method="post" action="forgot_password.php">
-                <p class="text" for="email">Digite seu endereço de email:</p>
-                <input class="input" type="email" id="email" name="email" required>
-                <input class="button" type="submit" name="forgot" value="Enviar">
-                <?php if (!empty($message)): ?>
-                    <p><?php echo $message; ?></p>
-                <?php endif; ?>
-            </form>
-        </div>
-    </main>
+    <div class="container">
+        <form class="form" method="POST" action="forgot_password.php">
+            <p class="text" for="email">Digite seu endereço de email:</p>
+            <input class="input" type="email" name="email" required>
+            <button class="button" type="submit" name="forgot">Enviar</button>
+            <?php if (!empty($message)): ?>
+                <p><?php echo $message; ?></p>
+            <?php endif; ?>
+        </form>
+    </div>
 </body>
 
 </html>

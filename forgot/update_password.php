@@ -19,8 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['token'])) {
 
 // Fecha conexão
 $connect->close();
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

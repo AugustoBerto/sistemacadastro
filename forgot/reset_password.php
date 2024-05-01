@@ -28,11 +28,11 @@ if (isset($_GET['token'])) {
 
         <body>
             <div class="container">
-                <form class="form" method="post" action="update_password.php">
+                <form class="form" action="update_password.php" method="POST">
                     <input type="hidden" name="token" value="<?php echo $token; ?>">
-                    <p class="text">Nova Senha:</p>
-                    <input class=" input" type="password" id="password" name="password">
-                    <input class="button" type="submit" value="Redefinir Senha">
+                    <p class="text">Insira sua nova senha:</p>
+                    <input class="input" type="password" name="password">
+                    <button class="button" type="submit">Redefinir senha</button>
                 </form>
             </div>
         </body>
