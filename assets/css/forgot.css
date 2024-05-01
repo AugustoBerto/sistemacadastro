@@ -32,12 +32,14 @@ body {
 }
 
 .input {
-    width: 100%;
-    margin-bottom: 16px;
-    gap: 10px;
+    width: 94%;
+    margin-top: 20px;
+    margin-bottom: 44px;
+    padding: 6px;
 }
 
 .text {
+    text-align: center;
     font-size: 1em;
     margin-top: 24p;
 }
@@ -45,4 +47,10 @@ body {
 .mobile-text {
     color: #ffffff;
     text-decoration: none;
+}
+
+.alert {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
 }

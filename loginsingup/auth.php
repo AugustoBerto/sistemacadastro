@@ -21,12 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         // Verifica se a senha é valida
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
-            echo "Login bem-sucedido!";
+            $message = "Login bem-sucedido!";
         } else {
-            echo "Email ou senha incorretos";
+            $message = "Email ou senha incorretos";
         }
     } else {
-        echo "Email não cadastrado";
+        $message = "Email não cadastrado";
     }
 }
 
@@ -44,21 +44,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
     // Verifica se o email já está em uso
     if ($email_check->num_rows > 0) {
-        echo "Este email já está cadastrado";
+        $message = "Este email já está cadastrado";
     } else {
         // Insere os dados na tabela
         $register = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
         // Executa o INSERT e verifica se foi bem-sucedido
         if ($connect->query($register) === TRUE) {
-            echo "Usuário registrado com sucesso!";
+            $message = "Usuário registrado com sucesso!";
         } else {
-            echo "Erro ao registrar usuário: " . $connect->error;
+            $message = "Erro ao registrar usuário: " . $connect->error;
         }
     }
 }
 
 // Fecha conexão
 $connect->close();
+?>
 
-// :)
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/forgot.css">
+    <link rel="stylesheet" href="../assets/css/colors.css">
+    <title>Recuperação de Senha</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <?php if (!empty($message)): ?>
+                <p><?php echo $message; ?></p>
+            <?php endif; ?>
+            <a href="../index.php" class="mobile-text">Voltar para tela de login</a>
+        </form>
+    </div>
+</body>
+
+</html>
+
+</html>

@@ -87,7 +87,7 @@ $connect->close();
             <input class="input" type="email" name="email" required>
             <button class="button" type="submit" name="forgot">Enviar</button>
             <?php if (!empty($message)): ?>
-                <p><?php echo $message; ?></p>
+                <p class="alert"><?php echo $message; ?></p>
             <?php endif; ?>
         </form>
     </div>
