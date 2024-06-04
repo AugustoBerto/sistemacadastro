@@ -1,2 +1,2 @@
-XAMPP
-COMPOSER (PHPmailer)
+# XAMPP
+## Composer (PHP Mailer)
